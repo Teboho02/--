@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Animation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .word {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .letter {
+            display: inline-block;
+            font-size: 3rem;
+            opacity: 0;
+            animation: drop 1.5s forwards;
+        }
+
+        @keyframes drop {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .letter:nth-child(1) { animation-delay: 0.1s; }
+        .letter:nth-child(2) { animation-delay: 0.3s; }
+        .letter:nth-child(3) { animation-delay: 0.5s; }
+        .letter:nth-child(4) { animation-delay: 0.7s; }
+        .letter:nth-child(5) { animation-delay: 0.9s; }
+        .letter:nth-child(6) { animation-delay: 1.1s; }
+        .letter:nth-child(7) { animation-delay: 1.3s; }
+        .letter:nth-child(8) { animation-delay: 1.5s; }
+        .letter:nth-child(9) { animation-delay: 1.7s; }
+
+        .word1 .letter {
+            color: red;
+        }
+
+        .word2 .letter {
+            color: green;
+        }
+
+        .word3 .letter {
+            color: blue;
+        }
+
+        .word4 .letter {
+            color: purple;
+        }
+
+        .heart {
+            font-size: 4rem;
+            opacity: 0;
+            animation: beat 1s infinite alternate;
+            display: none;
+        }
+
+        @keyframes beat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="word word1">
+        <span class="letter">I</span>
+    </div>
+    <div class="word word2">
+        <span class="letter">m</span>
+        <span class="letter">i</span>
+        <span class="letter">s</span>
+        <span class="letter">s</span>
+    </div>
+    <div class="word word3">
+        <span class="letter">y</span>
+        <span class="letter">o</span>
+        <span class="letter">u</span>
+    </div>
+    <div class="word word4">
+        <span class="letter">R</span>
+        <span class="letter">E</span>
+        <span class="letter">T</span>
+        <span class="letter">H</span>
+        <span class="letter">A</span>
+        <span class="letter">B</span>
+        <span class="letter">I</span>
+        <span class="letter">I</span>
+        <span class="letter">L</span>
+        <span class="letter">E</span>
+    </div>
+    <div id="heart" class="heart">❤️</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalAnimationTime = 1.7 + 1.5; // last letter delay + animation duration
+            setTimeout(() => {
+                const heart = document.getElementById('heart');
+                heart.style.display = 'block';
+                heart.style.opacity = '1';
+            }, (totalAnimationTime + 1) * 1000); // adding 1 second delay
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Animation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .word {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .letter {
+            display: inline-block;
+            font-size: 3rem;
+            opacity: 0;
+            animation: drop 1.5s forwards;
+        }
+
+        @keyframes drop {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .letter:nth-child(1) { animation-delay: 0.1s; }
+        .letter:nth-child(2) { animation-delay: 0.3s; }
+        .letter:nth-child(3) { animation-delay: 0.5s; }
+        .letter:nth-child(4) { animation-delay: 0.7s; }
+        .letter:nth-child(5) { animation-delay: 0.9s; }
+        .letter:nth-child(6) { animation-delay: 1.1s; }
+        .letter:nth-child(7) { animation-delay: 1.3s; }
+        .letter:nth-child(8) { animation-delay: 1.5s; }
+        .letter:nth-child(9) { animation-delay: 1.7s; }
+
+        .word1 .letter {
+            color: red;
+        }
+
+        .word2 .letter {
+            color: green;
+        }
+
+        .word3 .letter {
+            color: blue;
+        }
+
+        .word4 .letter {
+            color: purple;
+        }
+
+        .heart {
+            font-size: 4rem;
+            opacity: 0;
+            animation: beat 1s infinite alternate;
+            display: none;
+        }
+
+        @keyframes beat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="word word1">
+        <span class="letter">I</span>
+    </div>
+    <div class="word word2">
+        <span class="letter">m</span>
+        <span class="letter">i</span>
+        <span class="letter">s</span>
+        <span class="letter">s</span>
+    </div>
+    <div class="word word3">
+        <span class="letter">y</span>
+        <span class="letter">o</span>
+        <span class="letter">u</span>
+    </div>
+    <div class="word word4">
+        <span class="letter">R</span>
+        <span class="letter">E</span>
+        <span class="letter">T</span>
+        <span class="letter">H</span>
+        <span class="letter">A</span>
+        <span class="letter">B</span>
+        <span class="letter">I</span>
+        <span class="letter">I</span>
+        <span class="letter">L</span>
+        <span class="letter">E</span>
+    </div>
+    <div id="heart" class="heart">❤️</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalAnimationTime = 1.7 + 1.5; // last letter delay + animation duration
+            setTimeout(() => {
+                const heart = document.getElementById('heart');
+                heart.style.display = 'block';
+                heart.style.opacity = '1';
+            }, (totalAnimationTime + 1) * 1000); // adding 1 second delay
+        });
+    </script>
+</body>
+</html>
